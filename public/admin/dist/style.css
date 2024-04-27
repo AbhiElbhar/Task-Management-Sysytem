@@ -1,0 +1,62 @@
+
+.pricing-list {
+    text-align: center;
+}
+
+.prc-head h4 {
+    background: #23c6d9;
+    color: #fff;
+    padding: 28px;
+    letter-spacing: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.prc-list {
+    padding: 30px;
+}
+
+.pricing-list ul li{
+    padding: 5px 0px;
+}
+
+.prc-list li a {
+    display: block;
+    font-size: 15px;
+    letter-spacing: 0;
+    margin: 23px 0;
+    color: #6d6969;
+}
+
+.prc-list li.bold {
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.prc-list>a {
+    display: inline-block;
+    margin-top: 40px;
+    background: #805ff5;
+    color: #fff;
+    padding: 11px 20px;
+    border-radius: 40px;
+}
+
+.prc-list>a:hover {
+    box-shadow: 0 3px 25px rgba(44, 113, 218, 0.38);
+}
+
+.dark-pricing .prc-head h4 {
+    background: #3e3b3b;
+    color: #fff;
+}
+
+.dark-pricing .prc-list>a {
+    background: #3e3b3b;
+}
+
+.dark-pricing .prc-list>a:hover {
+    box-shadow: 0 3px 25px rgba(27, 27, 27, 0.38);
+}
