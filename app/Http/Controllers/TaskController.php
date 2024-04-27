@@ -13,9 +13,15 @@ class TaskController extends Controller
     *
     * @return \Illuminate\Http\Response
     */
-    public function index()
+    public function index(Request $request)
     {
-        $tasks = Task::paginate(5);
+        $tasks = Task::when($request->date !=null,function($q) use ($request){
+            return $q->whereDate('due_date',$request->date);
+            })
+            ->when($request->status != null, function($q) use ($request){
+                return $q->where('status',$request->status);
+            })
+           -> where('user_id',Auth::user()->id)->paginate(5);
         
         return view('user.task.index',compact('tasks'));
     }

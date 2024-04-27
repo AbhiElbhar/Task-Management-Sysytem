@@ -62,6 +62,12 @@
                             <p>Activity Log</p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{route('users.data')}}" class="nav-link">
+                            <i class="nav-icon"></i>
+                            <p>All Users Task</p>
+                        </a>
+                    </li>
                 </ul>
             </li> 
 

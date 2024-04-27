@@ -17,4 +17,9 @@ class Task extends Model
         ->logOnly(['user_id', 'title']);
         // Chain fluent methods for configuration options
     }
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
+    
 }

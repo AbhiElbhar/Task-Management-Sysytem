@@ -8,10 +8,32 @@
     @if (session('status'))
     <div class="alert alert-success">{{session('status')}}</div>
     @endif
-    <div class="row">
+
+
+    <div class="row mt-4">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
+                    <form action="" method="GET">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label>filter by date</label>
+                                <input type="date" name="date" value="{{Request::get('date')?? date('Y-m-d')}}" class="form-control">
+                            </div>
+                            <div class="col-md-3">
+                                <label>filter by status</label>
+                                <select name="status" class="form-control">
+                                <option value="">select All status</option>
+                                <option value="pending"{{Request::get('status') == 'pending' ? 'selected':''}}>pending</option>
+                                <option value="pending"{{Request::get('status') == 'completed' ? 'selected':''}}>completed</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <br/>
+                                <button type="submit" class="btn btn-primary">Filter</button>
+                            </div>
+                        </div>
+                    </form>
                     <h5 class="mb-3 mt-0 pt-2 text-uppercase header-title">User Task
                         <a href="{{ route('tasks.create') }}" class="btn btn-primary float-right">Add New Task</a>
                     </h5>
